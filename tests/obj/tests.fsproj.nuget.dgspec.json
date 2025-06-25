@@ -1,0 +1,175 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/husband/github/SimpleC-Compiler/tests/tests.fsproj": {}
+  },
+  "projects": {
+    "/home/husband/github/SimpleC-Compiler/compiler/compiler.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/husband/github/SimpleC-Compiler/compiler/compiler.fsproj",
+        "projectName": "compiler",
+        "projectPath": "/home/husband/github/SimpleC-Compiler/compiler/compiler.fsproj",
+        "packagesPath": "/home/husband/.nuget/packages/",
+        "outputPath": "/home/husband/github/SimpleC-Compiler/compiler/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/husband/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/share/dotnet/sdk/9.0.105/FSharp/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "FSharp.Core": {
+              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[9.0.101, )",
+              "generatePathProperty": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.4, 9.0.4]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.105/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/husband/github/SimpleC-Compiler/tests/tests.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/husband/github/SimpleC-Compiler/tests/tests.fsproj",
+        "projectName": "tests",
+        "projectPath": "/home/husband/github/SimpleC-Compiler/tests/tests.fsproj",
+        "packagesPath": "/home/husband/.nuget/packages/",
+        "outputPath": "/home/husband/github/SimpleC-Compiler/tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/husband/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/share/dotnet/sdk/9.0.105/FSharp/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/home/husband/github/SimpleC-Compiler/compiler/compiler.fsproj": {
+                "projectPath": "/home/husband/github/SimpleC-Compiler/compiler/compiler.fsproj"
+              }
+            }
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "FSharp.Core": {
+              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[9.0.101, )",
+              "generatePathProperty": true
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.12.0, )",
+              "generatePathProperty": true
+            },
+            "Unquote": {
+              "target": "Package",
+              "version": "[7.0.1, )",
+              "generatePathProperty": true
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.2, )",
+              "generatePathProperty": true
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.2, )",
+              "generatePathProperty": true
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.8.2, )",
+              "generatePathProperty": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.4, 9.0.4]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.105/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
