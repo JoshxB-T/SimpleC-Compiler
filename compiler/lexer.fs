@@ -91,7 +91,7 @@ module lexer =
               else if lookahead = '<' then
                 lexer (nextChar input) input ("<<" :: tokens)
               else
-                lexer (nextChar input) input ("<" :: tokens)
+                lexer lookahead input ("<" :: tokens)
 
     | '>'  -> let lookahead = (nextChar input)
               if lookahead = '=' then
@@ -99,7 +99,7 @@ module lexer =
                 else if lookahead = '>' then
                     lexer (nextChar input) input (">>" :: tokens)
                 else
-                    lexer (nextChar input) input (">" :: tokens)
+                    lexer lookahead input (">" :: tokens)
 
     | '!'  -> let lookahead = (nextChar input)
               if lookahead = '=' then
