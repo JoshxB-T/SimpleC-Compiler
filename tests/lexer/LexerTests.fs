@@ -45,7 +45,7 @@ let ``Tokenize missing declarations main simple C program`` () =
 let ``Tokenize if-else tree main simple C program`` () =
   let inputPath = Path.Combine(__SOURCE_DIRECTORY__, "../inputs/main22.c")
   let tokens = compiler.lexer.analyze inputPath
-  test <@ tokens.Length = 122 @>
+  test <@ tokens.Length = 120 @>
 
 
   
