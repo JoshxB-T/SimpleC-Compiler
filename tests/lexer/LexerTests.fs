@@ -30,22 +30,20 @@ let ``Tokenize empty main simple C program`` () =
   test <@ tokens.Length = 7 @>
 
 [<Fact>]
-let ``Tokenize one line main simple C program`` () =
-  let inputPath = Path.Combine(__SOURCE_DIRECTORY__, "../inputs/main11.c")
+let ``Tokenize empty file main simple C program`` () =
+  let inputPath = Path.Combine(__SOURCE_DIRECTORY__, "../inputs/main05.c")
+  let tokens = compiler.lexer.analyze inputPath
+  test <@ tokens.Length = 1 @>
+
+[<Fact>]
+let ``Tokenize missing declarations main simple C program`` () =
+  let inputPath = Path.Combine(__SOURCE_DIRECTORY__, "../inputs/main06.c")
   let tokens = compiler.lexer.analyze inputPath
   test <@ tokens.Length = 11 @>
 
 [<Fact>]
-let ``Tokenize missing declarations main simple C program`` () =
-  let inputPath = Path.Combine(__SOURCE_DIRECTORY__, "../inputs/main15.c")
-  let tokens = compiler.lexer.analyze inputPath
-  test <@ tokens.Length = 22 @>
-
-[<Fact>]
 let ``Tokenize if-else tree main simple C program`` () =
-  let inputPath = Path.Combine(__SOURCE_DIRECTORY__, "../inputs/main22.c")
+  let inputPath = Path.Combine(__SOURCE_DIRECTORY__, "../inputs/main07.c")
   let tokens = compiler.lexer.analyze inputPath
   test <@ tokens.Length = 120 @>
 
-
-  
