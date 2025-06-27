@@ -1,5 +1,8 @@
 //
-// Expected: 74 + 1 tokens
+// Testing expectations
+// --------------------
+// tokens: 75
+// compilation: "Success!"
 //
 void main()
 {
