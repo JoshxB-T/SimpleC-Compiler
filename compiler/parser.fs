@@ -24,14 +24,14 @@ module parser =
     | "cin"  -> input tokens
     | "cout" -> output tokens
     | "if"   -> ifstmt tokens
-    | ";"    -> matchToken ";" tokens
     | token when token.StartsWith "identifier:" -> assignment tokens
+    | ";"    -> matchToken ";" tokens
     | _      -> failwith ("expecting statement, but found " + List.head tokens)
 
   and private stmts tokens =
     let T1 = stmt tokens
     match T1 with
-    | "}"::_ -> tokens
+    | "}"::_ -> T1
     |  _     -> let T2 = stmt tokens
                 stmts T2
 
@@ -46,8 +46,8 @@ module parser =
     let T1 = matchToken "cin" tokens
     let T2 = matchToken ">>" T1
     match List.head T2 with
-    | token when token.StartsWith "identifer:" -> let T3 = matchToken token T2
-                                                  matchToken ";" T3
+    | token when token.StartsWith "identifier:" -> let T3 = matchToken token T2
+                                                   matchToken ";" T3
     | _ -> failwith ("expecting identifier, but found " + List.head T2)
 
   and private output tokens =
@@ -68,10 +68,10 @@ module parser =
 
   and private assignment tokens =
     match tokens with
-    | token::_ when token.StartsWith "identifier" -> let T1 = matchToken token tokens
-                                                     let T2 = matchToken "=" T1
-                                                     let T3 = expr T2
-                                                     matchToken ";" T3
+    | token::_ when token.StartsWith "identifier:" -> let T1 = matchToken token tokens
+                                                      let T2 = matchToken "=" T1
+                                                      let T3 = expr T2
+                                                      matchToken ";" T3
     | _ -> failwith ("expecting identifier, but found " + List.head tokens)
 
   and private ifstmt tokens =
@@ -114,11 +114,5 @@ module parser =
       let result = simpleC tokens
       "Success!"
     with
-      | ex -> "syntax_error: " + ex.Message
-
-
-
-
-
-
+      | ex -> "syntax error: " + ex.Message
 
