@@ -17,7 +17,7 @@ let ``Parse syntax error simple C program`` () =
   let inputPath = Path.Combine(__SOURCE_DIRECTORY__, "../inputs/main02.c")
   let tokens = compiler.lexer.analyze inputPath
   let result = compiler.parser.parse tokens
-  test <@ result = "syntax error: expecting ;, but found identifier:x" @>
+  test <@ result = "syntax error: expecting '=' or ';' after declaration, but found identifier:x" @>
 
 [<Fact>]
 let ``Parse semicolon main simple C program`` () =
@@ -45,7 +45,7 @@ let ``Parse missing declarations main simple C program`` () =
   let inputPath = Path.Combine(__SOURCE_DIRECTORY__, "../inputs/main06.c")
   let tokens = compiler.lexer.analyze inputPath
   let result = compiler.parser.parse tokens
-  test <@ result = "semantic error: undeclared identifier x" @>
+  test <@ result = "semantic error: undeclared identifier:x" @>
 
 [<Fact>]
 let ``Parse if-else tree main simple C program`` () =
