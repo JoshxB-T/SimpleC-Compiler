@@ -51,7 +51,6 @@ and private varDeclare tokens =
                                                  if exists name symTable then
                                                    failwith ("semantic error: redeclared identifier: '" + name + "'")
                                                  let T2 = matchToken token T1
-                                                 
                                                  match List.head T2 with
                                                  | "="   -> let T3 = matchToken "=" T2
                                                             let T4 = expr T3
