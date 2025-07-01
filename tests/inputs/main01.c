@@ -2,12 +2,12 @@
 // Testing expectations
 // --------------------
 // tokens: 75
-// compilation: "Success!"
+// parser: "Success!"
 //
 void main()
 {
-  int x;     // define x:
-  cin >> x;  // input a value:
+  int x;     // Define x:
+  cin >> x;  // Input a value:
   
   int y;
   int z;

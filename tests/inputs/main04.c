@@ -2,7 +2,7 @@
 // Testing expectations
 // --------------------
 // tokens: 7
-// compilation: "syntax error: expected statment, but found none"
+// parser: "error syntax: expected statment, but found }"
 //
 void main() {
     

@@ -2,7 +2,7 @@
 // Testing expectations
 // --------------------
 // tokens: 8 
-// compilation: "Success!"
+// parser: "Success!"
 //
 void main()
 {
