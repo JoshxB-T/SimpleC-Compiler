@@ -13,7 +13,7 @@ let main argv =
     printfn ""
     printfn "%A" tokens
     printfn ""
-//    let result = compiler.parser.parse tokens
-//    printfn "%s" result
-//    printfn ""
+    let result = compiler.parser.parse tokens
+    printfn "%s" result
+    printfn ""
     0

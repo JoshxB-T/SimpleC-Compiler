@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Compile Include="lexer/LexerTests.fs" />
+    <Compile Include="parser/ParserTests.fs" />
   </ItemGroup>
 
   <ItemGroup>

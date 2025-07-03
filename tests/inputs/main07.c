@@ -1,12 +1,18 @@
 //
-// Expected: 119 + 1 tokens
+// Testing expectations
+// --------------------
+// tokens: 131
+// parser: "Success!"
 //
 void main()
 {
   int x;
+  int var;
   cin >> x;
   cout << x;
   x = 123*5;
+  int y = 10;
+  int count;
   
   if (true)
     if (false)

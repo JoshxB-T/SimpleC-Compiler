@@ -1,9 +1,12 @@
 //
-// Expected: 20 + 1 tokens
+// Testing expectations
+// --------------------
+// tokens: 21
+// parser: "syntax error: expecting ;, but found indentifier:x"
 //
 void main()
 {
-    int x     // syntax error: expecting ;, but found identifier:x
+    int x     // Forgot semicolon. Oops!
 
     x = 0;
     cout << x;

@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="symbolTable.fs" />
+    <Compile Include="parser.fs" />
     <Compile Include="lexer.fs" />
     <Compile Include="main.fs" />
   </ItemGroup>
