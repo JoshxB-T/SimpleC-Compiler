@@ -1,6 +1,7 @@
 module compiler.parser
 
 open compiler.SymbolTable
+open compiler.ir
 
 let mutable symTable: SymbolTable = Map.empty
 
