@@ -1,5 +1,6 @@
 # SimpleC-Compiler
 ## BNF ("Backus-Naur Form") Definition of the SimpleC Syntax
+```plaintext
 <simpleC>   -> void main () { <stmts> } $
 
 <stmts>     -> <stmt> <morestmts>
@@ -14,3 +15,4 @@
              | ifstmt
 
 <empty>     -> ;
+```
