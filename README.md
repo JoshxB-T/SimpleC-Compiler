@@ -29,6 +29,7 @@
 <output>       -> cout << <output-value>;
 <output-value> -> <expr-value>
                 | endl
+
 <assignment>   -> identifier = <expr> ;
 <ifstmt>       -> if ( <condition> ) <then-part> <else-part>
 <condition>    -> <expr>
